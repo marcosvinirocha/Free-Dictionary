@@ -1,12 +1,22 @@
+"use client";
+
+import { SearchBar } from "@/components/dictionary/search-bar";
+import { HistoryList } from "@/components/dictionary/history-list";
+
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center">
-      <main className="flex flex-col items-center gap-8 w-full max-w-2xl px-4 py-16">
-        <h1 className="text-4xl font-bold tracking-tight">Free Dictionary</h1>
-        <p className="text-muted-foreground text-lg text-center">
-          Search for any English word to see its definition, phonetics, and examples.
-        </p>
-      </main>
+    <div className="flex flex-1 flex-col items-center px-4 py-12">
+      <div className="flex w-full max-w-xl flex-col items-center gap-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold tracking-tight">Free Dictionary</h1>
+          <p className="mt-2 text-muted-foreground">
+            Pesquise qualquer palavra em Inglês e vê seu significado e pronunciação.
+          </p>
+        </div>
+
+        <SearchBar />
+        <HistoryList />
+      </div>
     </div>
   );
 }
