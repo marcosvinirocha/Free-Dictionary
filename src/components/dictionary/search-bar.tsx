@@ -28,12 +28,12 @@ export function SearchBar() {
         <Input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search for a word..."
+          placeholder="Pesquise uma palavra ..."
           className="pl-10"
         />
       </div>
       <Button type="submit" disabled={!query.trim()}>
-        Search
+        Pesquisar
       </Button>
     </form>
   );

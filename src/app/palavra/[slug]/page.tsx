@@ -84,7 +84,7 @@ export default function WordPage({ params }: PageProps) {
 
               {data[0].origin && (
                 <p className="text-sm text-muted-foreground">
-                  Origin: {data[0].origin}
+                  Origem: {data[0].origin}
                 </p>
               )}
 
