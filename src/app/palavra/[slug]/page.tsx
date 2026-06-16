@@ -49,7 +49,7 @@ export default function WordPage({ params }: PageProps) {
       <div className="mx-auto w-full max-w-2xl">
         <Link href="/">
           <Button variant="ghost" size="sm">
-            <ArrowLeft className="h-4 w-4" />
+            <ArrowLeft className="h-4 w-4" suppressHydrationWarning />
             Voltar
           </Button>
         </Link>

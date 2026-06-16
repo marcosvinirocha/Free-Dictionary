@@ -40,6 +40,7 @@ export function FavoritesButton({
           "h-4 w-4",
           favorited && "fill-yellow-500 text-yellow-500",
         )}
+        suppressHydrationWarning
       />
       {showLabel && (favorited ? "Salvado" : "Salvar")}
     </Button>

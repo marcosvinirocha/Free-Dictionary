@@ -4,7 +4,7 @@ import { BookOpen } from "lucide-react";
 export default function NotFound() {
   return (
     <div className="flex flex-1 flex-col items-center justify-center gap-4 px-4 text-center">
-      <BookOpen className="h-12 w-12 text-muted-foreground" />
+      <BookOpen className="h-12 w-12 text-muted-foreground" suppressHydrationWarning />
       <h1 className="text-4xl font-bold">404</h1>
       <p className="text-muted-foreground">
         The page you are looking for does not exist.

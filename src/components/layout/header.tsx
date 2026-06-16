@@ -34,7 +34,7 @@ export function Header() {
           href="/"
           className="flex items-center gap-2 font-semibold tracking-tight"
         >
-          <BookOpen className="h-5 w-5" />
+          <BookOpen className="h-5 w-5" suppressHydrationWarning />
           <span className="hidden sm:inline">Free Dictionary</span>
         </Link>
 
@@ -50,7 +50,7 @@ export function Header() {
                   : "text-muted-foreground hover:bg-muted hover:text-foreground",
               )}
             >
-              <Icon className="h-4 w-4" />
+              <Icon className="h-4 w-4" suppressHydrationWarning />
               <span className="hidden sm:inline">{label}</span>
             </Link>
           ))}

@@ -33,7 +33,7 @@ export function WordDisplay({ word }: WordDisplayProps) {
               className="rounded-full p-1.5 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
               aria-label="Listen to pronunciation"
             >
-              <Play className="h-4 w-4" />
+              <Play className="h-4 w-4" suppressHydrationWarning />
             </button>
           )}
         </div>

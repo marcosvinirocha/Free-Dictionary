@@ -11,7 +11,7 @@ export function HistoryList() {
   if (history.length === 0) {
     return (
       <div className="flex flex-col items-center gap-2 py-8 text-center">
-        <Clock className="h-8 w-8 text-muted-foreground" />
+        <Clock className="h-8 w-8 text-muted-foreground" suppressHydrationWarning />
         <p className="text-sm text-muted-foreground">
           Nenhuma palavra pesquisada ainda.
         </p>
@@ -23,11 +23,11 @@ export function HistoryList() {
     <div className="space-y-2">
       <div className="flex items-center justify-between">
         <h2 className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
-          <Clock className="h-4 w-4" />
+          <Clock className="h-4 w-4" suppressHydrationWarning />
           Pesquisas recentes
         </h2>
         <Button variant="ghost" size="sm" onClick={clearHistory}>
-          <Trash2 className="h-3 w-3" />
+          <Trash2 className="h-3 w-3" suppressHydrationWarning />
           Limpar
         </Button>
       </div>

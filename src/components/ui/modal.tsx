@@ -61,7 +61,7 @@ export function Modal({
           className="ml-auto rounded-md p-1 text-muted-foreground hover:bg-muted hover:text-foreground"
           aria-label="Close"
         >
-          <X className="h-5 w-5" />
+          <X className="h-5 w-5" suppressHydrationWarning />
         </button>
       </div>
       <div className="px-6 py-4">{children}</div>

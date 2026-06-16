@@ -13,7 +13,7 @@ export function FavoritesList() {
   if (favorites.length === 0) {
     return (
       <div className="flex flex-col items-center gap-2 py-16 text-center">
-        <Star className="h-10 w-10 text-muted-foreground" />
+        <Star className="h-10 w-10 text-muted-foreground" suppressHydrationWarning />
         <h2 className="text-lg font-semibold">Nenhum favorito salvo.</h2>
         <p className="text-sm text-muted-foreground">
           Salve as palavras clicando na estrela em quaquer parte da palavra.
@@ -61,7 +61,7 @@ export function FavoritesList() {
               onClick={() => removeFavorite(entry.word)}
               aria-label={`Remove ${entry.word} from favorites`}
             >
-              <Trash2 className="h-4 w-4 text-muted-foreground hover:text-red-500" />
+              <Trash2 className="h-4 w-4 text-muted-foreground hover:text-red-500" suppressHydrationWarning />
             </Button>
           </Card>
         );
