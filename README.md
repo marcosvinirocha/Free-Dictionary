@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Free Dictionary
 
-## Getting Started
+Uma aplicação web de dicionário de inglês construída com **Next.js 16** (App Router),
+**TypeScript** e **Tailwind CSS v4**. Utiliza a [Free Dictionary API](https://dictionaryapi.dev/)
+para consultar definições, fonéticas e exemplos de palavras em inglês.
 
-First, run the development server:
+## Funcionalidades
+
+- **Busca de palavras** — Pesquise qualquer palavra em inglês e veja definições,
+  fonética, áudio de pronúncia e exemplos de uso.
+- **Favoritos** — Salve palavras nos favoritos (persistido no `localStorage`).
+  Gerencie seus favoritos pela página dedicada.
+- **Histórico** — Palavras pesquisadas recentemente são salvas automaticamente
+  e exibidas na página inicial.
+- **Dicionário completo** — Navegue por uma lista de palavras comuns e veja
+  detalhes em um modal.
+- **Tema claro** — Design limpo e responsivo com suporte a tema claro.
+- **Performance** — Server Components, lazy loading e fontes otimizadas com
+  `next/font`.
+
+## Stack
+
+| Tecnologia | Versão |
+|---|---|
+| Next.js | 16 (App Router) |
+| React | 19 |
+| TypeScript | 5 |
+| Tailwind CSS | 4 |
+| Lucide React | — |
+
+## Como rodar
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estrutura do Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                    # Rotas (App Router)
+│   ├── page.tsx            # Home — busca + histórico
+│   ├── palavra/[slug]/     # Detalhes da palavra
+│   ├── favoritos/          # Lista de favoritos
+│   └── dicionario/         # Lista de palavras + modal
+├── components/
+│   ├── ui/                 # Button, Input, Card, Badge, Skeleton, Modal
+│   ├── layout/             # Header com navegação
+│   └── dictionary/         # SearchBar, WordDisplay, FavoritesButton, etc.
+├── contexts/               # DictionaryProvider (favoritos + histórico)
+├── hooks/                  # useLocalStorage (hydration-safe)
+├── services/               # API calls (Free Dictionary API)
+└── types/                  # TypeScript interfaces
+```
 
-## Learn More
+## API
 
-To learn more about Next.js, take a look at the following resources:
+Os dados de palavras são obtidos da [Free Dictionary API](https://dictionaryapi.dev/):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+GET https://api.dictionaryapi.dev/api/v2/entries/en/{word}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Licença
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
