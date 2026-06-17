@@ -18,6 +18,10 @@ para consultar definições, fonéticas e exemplos de palavras em inglês.
 - **Performance** — Server Components, lazy loading e fontes otimizadas com
   `next/font`.
 
+## Deploy
+
+Acesse a aplicação em produção: [freedictionary-mu.vercel.app](https://freedictionary-mu.vercel.app/)
+
 ## Stack
 
 | Tecnologia | Versão |
